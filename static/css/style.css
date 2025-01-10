@@ -128,8 +128,8 @@ header * {
 
   .div-svg{
     position: absolute;
-    top: 8rem;
-    right: 25rem;
+    top: 15%;
+    right: 22%;
   }
 
   aside{
@@ -137,8 +137,8 @@ header * {
     flex-direction: column;
     align-items: right;
     position: absolute;
-    top: 21rem;
-    right: 14rem;
+    top: 40%;
+    right: 13%;
   }
 
   aside svg {
