@@ -26,7 +26,7 @@ strong {
 
 body {
   font-family: Oswald, sans-serif;
-  background-color: var(--hover-color);
+  background-color: var(--letter-color);
 }
 
 nav{
@@ -107,7 +107,7 @@ header * {
     display: flex;
     list-style: none;
     margin-top: 1em;
-    padding-right: 25rem;
+    padding-right: 23%;
   }
 
   .nav-links li:nth-child(1) {
@@ -359,9 +359,11 @@ header * {
 
   .machine article:nth-child(1) div div{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
+    align-items: start;
+  }
+
+  .machine article:nth-child(1) div div p{
+    margin-top: 10px;
   }
 
   .machine a {
@@ -550,6 +552,20 @@ footer svg{
 
 
   /* Responsive Design */
+  @media screen and (max-width: 1768px) {
+    /* Machine Section */
+    .machine article {
+      margin: auto;
+    }
+
+    .machine article:nth-child(2){
+      display: none;
+    }
+    .machine article:nth-child(1) div:nth-last-child(2){
+      padding: 100px 70px 0 140px;
+    }
+    
+  }
   @media screen and (max-width: 1024px) {
     header h1 {
       font-size: 2rem;
@@ -564,10 +580,12 @@ footer svg{
   
     .hero h1 {
       font-size: 1.8rem;
+      max-width: 300px;
     }
   
     .hero p {
       font-size: 1rem;
+      max-width: 500px;
     }
 
     .hero svg{
@@ -584,6 +602,29 @@ footer svg{
     .articles article {
       width: 100%;
     }
+
+    /* Gallery Section */
+    .article1-gallery{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery-div-1{
+      max-width: 100%;
+    }
+
+    .gallery-div-2{
+      width: 100%;
+    }
+
+    /* Machine Section */
+    .machine article{
+      width: 70%;
+    }
+    .machine article:nth-child(1) div:nth-last-child(2){
+      padding: 70px 70px 0 100px;
+    }
+    
   }
   
   @media (max-width: 768px) {
@@ -598,10 +639,12 @@ footer svg{
     
     .hero h1 {
       font-size: 1.5rem;
+      max-width: 200px;
     }
   
     .hero p {
       font-size: 0.9rem;
+      max-width: 300px;
     }
 
     .hero svg{
@@ -618,6 +661,20 @@ footer svg{
       display: flex;
       flex-direction: column;
       width: 40%;
+    }
+
+    /* Machine Section */
+    .machine article{
+      width: 90%;
+    }
+
+    .machine article:nth-child(1) div:nth-last-child(2){
+      padding: 70px 70px 0 100px;
+    }
+
+    /* Pricing Section */
+    .pricing article:nth-child(1){
+      width: 60%;
     }
   }
   
@@ -643,10 +700,6 @@ footer svg{
       font-size: 0.8rem;
     }
 
-    .form-container {
-      border-radius: 1rem;
-    }
-
     h3 {
       font-size: 1rem;
     }
@@ -656,6 +709,13 @@ footer svg{
     }
 
     /* Intro  articles*/
+    aside{
+      display: flex;
+      flex-direction: row;
+      top: 50%;
+      right: 35%;
+    }
+
     .articles article h3 {
       font-size: 1rem;
     }
