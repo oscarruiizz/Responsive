@@ -435,7 +435,7 @@ header * {
   }
 
   .pricing-div{
-    padding: 60px 20px;
+    padding: 60px 60px;
   }
 
   .pricing article:nth-child(1){
@@ -454,7 +454,7 @@ header * {
   .pricing article:nth-child(2){
     display: flex;
     justify-content: space-around;
-    width: 60%;
+    width: 70%;
   }
 
   .pricing article:nth-child(2) div:nth-child(2){
