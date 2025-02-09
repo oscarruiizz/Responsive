@@ -109,14 +109,6 @@ header {
     margin-top: 3em;
   }
 
-  nav ul li {
-    margin: 0 15px;
-
-    a:hover {
-      color: var(--primary-color);
-    }
-  }
-
   img {
     width: 5em;
     height: 5em;
@@ -134,14 +126,22 @@ header {
   margin-top: 1em;
   padding-right: 23%;
 
-  li:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  li {
+    margin: 0 15px;
 
-    svg {
-      position: absolute;
-      bottom: 80px;
+    a:hover {
+      color: var(--primary-color);
+    }
+
+    &:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        position: absolute;
+        bottom: 80px;
+      }
     }
   }
 }
@@ -176,6 +176,35 @@ aside {
   align-items: center;
   padding: 3em;
 
+  .form-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 1em;
+    border-radius: 7em;
+    margin-bottom: 7em;
+
+    input {
+      padding: 10px;
+      border: none;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      padding: 15px 30px;
+      border: none;
+      cursor: pointer;
+      border-radius: 7em;
+      color: white;
+
+      &:hover {
+        background-color: var(--letter-color);
+        color: var(--hover-color);
+      }
+    }
+  }
+
   h1 {
     font-size: 3rem;
     max-width: 400px;
@@ -193,34 +222,7 @@ aside {
   }
 }
 
-.form-container {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-  background-color: white;
-  padding: 1em;
-  border-radius: 7em;
-  margin-bottom: 7em;
 
-  input {
-    padding: 10px;
-    border: none;
-  }
-
-  button {
-    background-color: var(--primary-color);
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 7em;
-    color: white;
-
-    &:hover {
-      background-color: var(--letter-color);
-      color: var(--hover-color);
-    }
-  }
-}
 
 /* Intro Section */
 .intro {
@@ -570,6 +572,7 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 1768px) {
+
   /* Machine Section */
   .machine article {
     margin: auto;
@@ -589,6 +592,7 @@ footer {
 }
 
 @media (max-width: 1200px) {
+
   /*Gallery Section*/
   .gallery:nth-child(4) {
     margin: 20px;
@@ -645,47 +649,52 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  header h1 {
-    font-size: 2rem;
-    margin-top: 1.5em;
-  }
+  header {
+    h1 {
+      font-size: 2rem;
+      margin-top: 1.5em;
+    }
 
-  .svg-header {
-    color: var(--letter-color);
-  }
+    .svg-header {
+      color: var(--letter-color);
+    }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-    padding: 0;
-    color: transparent;
-    display: none;
-  }
+    .nav-links {
+      flex-direction: column;
+      gap: 15px;
+      padding: 0;
+      color: transparent;
+      display: none;
 
-  header nav ul li a:hover {
-    color: transparent;
-  }
+      li {
+        a:hover {
+          color: transparent;
+        }
+      }
+    }
 
-  .hero p {
-    color: var(--color-letra-corregido);
-  }
+    aside {
+      display: flex;
+      flex-direction: row;
+      top: 90%;
+      right: 43%;
+    }
 
-  .hero svg {
-    transform: translate(60%, 60%);
-  }
+    .hero {
+      p {
+        color: var(--color-letra-corregido);
+      }
 
-  .form-container {
-    flex-direction: column;
-    padding: 2em;
-    border-radius: 3em;
-  }
+      .form-container {
+        flex-direction: column;
+        padding: 2em;
+        border-radius: 3em;
 
-  /* Intro  articles*/
-  aside {
-    display: flex;
-    flex-direction: row;
-    top: 90%;
-    right: 43%;
+        svg {
+          transform: translate(60%, 60%);
+        }
+      }
+    }
   }
 
   .articles article {
@@ -745,7 +754,7 @@ footer {
 
   /* Machine Section */
   .machine article:nth-child(1) div:nth-last-child(2) {
-    padding: 70px 70px 0 100px;
+    padding: 50 50px 0 50px;
   }
 
   /* Pricing Section */
@@ -800,6 +809,20 @@ footer {
 
   .articles article svg {
     width: 3rem;
+  }
+
+  /*Machine Section*/
+  .machine article:nth-child(1) div:nth-last-child(2) {
+    padding: 50px 20px 0 50px;
+  }
+
+  /*Pricing Section*/
+  .pricing {
+    padding: 50px 0px;
+
+    .pricing-div {
+      padding: 30px 30px;
+    }
   }
 
   /* FotoPerfil Section */
